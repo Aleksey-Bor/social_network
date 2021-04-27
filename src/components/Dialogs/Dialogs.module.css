@@ -1,5 +1,25 @@
 
-.content {
-    grid-area: c;
-    color: #211f1c;
+.dialogs {
+ display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsItems {
+ padding: 10px;
+}
+
+.dialogsItems .active {
+    color: gold;
+}
+
+.dialog {
+
+}
+
+.messages {
+
+}
+
+.message {
+
 }
