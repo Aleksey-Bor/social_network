@@ -1,30 +1,38 @@
 import React from 'react';
 import style from './Dialogs.module.css';
+import {NavLink} from "react-router-dom";
+
+const DialogItem = (props) => {
+    let path = "/dialogs/" + props.id
+    return (
+        <div className={style.dialog + ' ' + style.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+const Message = (props) => {
+    return (
+        <div className={style.message}>{props.message}</div>
+    )
+}
 
 const Dialogs = (props) => {
     return (
         <div className={style.dialogs}>
             <div className={style.dialogsItems}>
-                <div className={style.dialog + ' ' + style.active}>
-                    Alex
-                </div>
-                <div className={style.dialog}>
-                    Nastya
-                </div>
-                <div className={style.dialog}>
-                    Marsya
-                </div>
-                <div className={style.dialog}>
-                    Bill
-                </div>
-                <div className={style.dialog}>
-                    Steve
-                </div>
+                <DialogItem name="Alex" id="1"/>
+                <DialogItem name="Nastya" id="2"/>
+                <DialogItem name="Marsya" id="3"/>
+                <DialogItem name="Steve" id="4"/>
+                <DialogItem name="Bill" id="5"/>
+                <DialogItem name="Elon" id="6"/>
             </div>
             <div className={style.messages}>
-                <div className={style.message}>Hi!</div>
-                <div className={style.message}>How do you like programming?</div>
-                <div className={style.message}>I love learning React with the IT-KamaSutra.</div>
+                <Message message="Hi"/>
+                <Message message="How do you like programming?"/>
+                <Message message="I love learning React with the IT-KamaSutra."/>
+                <Message message="Yo!"/>
             </div>
         </div>
     );
