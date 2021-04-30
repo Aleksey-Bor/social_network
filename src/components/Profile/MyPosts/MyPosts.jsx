@@ -6,9 +6,11 @@ const MyPosts = () => {
 
     let postsDate = [
         {id: 1, message: 'Hi, how  are you?', likesCount: 12},
-        {id: 2, message: 'It\'s  my first post',  likesCount: 76},
-        {id: 3, message: 'Hello Nastya how  are you?',  likesCount: 22},
+        {id: 2, message: 'It\'s  my first post', likesCount: 76},
+        {id: 3, message: 'Hello Nastya how  are you?', likesCount: 22},
     ];
+
+    let postsElements = postsDate.map(el => <Post message={el.message} likesCount={el.likesCount} id={el.id}/>);
 
     return (
         <div className={style.postsBlock}>
@@ -22,9 +24,7 @@ const MyPosts = () => {
                 </div>
             </div>
             <div className={style.posts}>
-                <Post message={postsDate[0].message} likeCount={postsDate[0].likesCount} id={postsDate[0].id}/>
-                <Post message={postsDate[1].message} likeCount={postsDate[1].likesCount} id={postsDate[1].id}/>
-                <Post message={postsDate[2].message} likeCount={postsDate[2].likesCount} id={postsDate[2].id}/>
+                {postsElements}
             </div>
         </div>
     );
