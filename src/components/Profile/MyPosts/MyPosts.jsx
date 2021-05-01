@@ -2,15 +2,9 @@ import React from "react";
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
-    let postsDate = [
-        {id: 1, message: 'Hi, how  are you?', likesCount: 12},
-        {id: 2, message: 'It\'s  my first post', likesCount: 76},
-        {id: 3, message: 'Hello Nastya how  are you?', likesCount: 22},
-    ];
 
-    let postsElements = postsDate.map(el => <Post message={el.message} likesCount={el.likesCount} id={el.id}/>);
 
     return (
         <div className={style.postsBlock}>
@@ -24,7 +18,7 @@ const MyPosts = () => {
                 </div>
             </div>
             <div className={style.posts}>
-                {postsElements}
+                {props.postsElements}
             </div>
         </div>
     );
