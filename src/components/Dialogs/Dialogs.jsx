@@ -5,15 +5,16 @@ import Message from './Message/Message';
 
 const Dialogs = (props) => {
 
-
+    let dialogsElements = props.dialogsData.map(el => <DialogItem name={el.name} id={el.id}/>);
+    let messagesElement = props.messagesData.map(el => <Message message={el.message} id={el.id}/>);
 
     return (
         <div className={style.dialogs}>
             <div className={style.dialogsItems}>
-                {props.dialogsElements}
+                {dialogsElements}
             </div>
             <div className={style.messages}>
-                {props.messagesElement}
+                {messagesElement}
             </div>
         </div>
     );

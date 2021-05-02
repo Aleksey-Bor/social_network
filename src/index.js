@@ -30,10 +30,9 @@ let messagesData = [
     {id: 6, message: 'Yo!'}
 ];
 
-let postsElements = postsDate.map(el => <Post message={el.message} likesCount={el.likesCount} id={el.id}/>);
-let dialogsElements = dialogsData.map(el => <DialogItem name={el.name} id={el.id}/>);
-let messagesElement = messagesData.map(el => <Message message={el.message} id={el.id}/>);
 
-ReactDOM.render(<App postsElements={postsElements} dialogsElements={dialogsElements} messagesElement={messagesElement}/>, document.getElementById("root"));
+
+
+ReactDOM.render(<App postsData={postsDate} messagesData={messagesData} dialogsData={dialogsData}/>, document.getElementById("root"));
 
 
