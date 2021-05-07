@@ -8,7 +8,7 @@ const MyPosts = (props) => {
                     likesCount={el.likesCount}
                     id={el.id}/>
     );
-    console.log(postsElements);
+
     let addPost = () => {
         props.addPost();
     };
