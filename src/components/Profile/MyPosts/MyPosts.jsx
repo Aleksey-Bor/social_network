@@ -5,10 +5,10 @@ import Post from "./Post/Post";
 const MyPosts = (props) => {
     let postsElements = props.postsData.map(
         el => <Post message={el.message}
-                    likeCount={el.likesCount}
+                    likesCount={el.likesCount}
                     id={el.id}/>
     );
-
+    console.log(postsElements);
     let addPost = () => {
         props.addPost();
     };

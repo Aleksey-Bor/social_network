@@ -7,7 +7,7 @@ let state = {
             {id: 2, message: 'It\'s  my first post', likesCount: 76},
             {id: 3, message: 'Hello Nastya how  are you?', likesCount: 22},
         ],
-        newPostText: 'it-kamasutra.com!!!'
+        newPostText: 'Enter your message...'
     },
     dialogsPage: {
         messagesData: [
@@ -28,12 +28,12 @@ let state = {
         ],
     },
 };
-window.state = state;
+
 export let addPost = () => {
     let newPost = {
         id: 4,
         message: state.profilePage.newPostText,
-        likesCount: 0,
+        likesCount: 0
     };
     state.profilePage.postsData.unshift(newPost);
     state.profilePage.newPostText = '';
