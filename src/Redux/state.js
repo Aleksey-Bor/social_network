@@ -1,6 +1,9 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
+const SEND_MESSAGE = 'SEND-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW_-MESSAGE-TEXT';
+
 let store = {
     _state: {
         profilePage: {
@@ -9,7 +12,7 @@ let store = {
                 {id: 2, message: 'It\'s  my first post', likesCount: 76},
                 {id: 3, message: 'Hello Nastya how  are you?', likesCount: 22},
             ],
-            newPostText: 'Enter your message...'
+            newPostText: ''
         },
         dialogsPage: {
             messagesData: [
@@ -28,6 +31,7 @@ let store = {
                 {id: 5, name: 'Bill'},
                 {id: 6, name: 'Elon'}
             ],
+            newMessagesText: ''
         },
     },
     _callSubscriber() {
@@ -41,7 +45,7 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
+        if (action.type === ADD_POST) {
             let newPost = {
                 id: 4,
                 message: this._state.profilePage.newPostText,
@@ -50,8 +54,19 @@ let store = {
             this._state.profilePage.postsData.unshift(newPost);
             this._state.profilePage.newPostText = '';
             this._callSubscriber(this._state);
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        }  else if (action.type === SEND_MESSAGE) {
+            let newMessage = {
+                id: 7,
+                message: this._state.dialogsPage.newMessagesText
+            };
+            this._state.dialogsPage.messagesData.push(newMessage);
+            this._state.dialogsPage.newMessagesText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+            this._state.dialogsPage.newMessagesText = action.newText;
             this._callSubscriber(this._state);
         }
     }
@@ -62,6 +77,13 @@ export const addPostActionCreator = () => ({type: ADD_POST});
 
 export const updateNewPostTextActionCreator = (text) => ({
     type: UPDATE_NEW_POST_TEXT,
+    newText: text
+});
+
+export const sendMessageActionCreator = () => ({type: SEND_MESSAGE});
+
+export const updateNewMassageActionCreator = (text) => ({
+    type: UPDATE_NEW_MESSAGE_TEXT,
     newText: text
 });
 
