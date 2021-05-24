@@ -1,3 +1,4 @@
+//This store does not participate in the operation of the application. It is left as a cheat sheet.
 import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
 import sidebarReducer from "./sidebarReducer";
