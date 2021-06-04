@@ -132,7 +132,7 @@ export const followToUser = (userId) => {
   };
 };
 
-export const unFollow getting users and subscribing users ToUser = (userId) => {
+export const unFollowToUser = (userId) => {
   return (dispatch) => {
     dispatch(toggleFollowingProgress(true, userId));
     usersAPI.unFollowToUser(userId).then((data) => {
