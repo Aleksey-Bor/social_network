@@ -22,6 +22,8 @@ export const usersAPI = {
   },
 
   unFollowToUser(userId) {
-    return instance.delete(`follow/${userId}`).then((response) => response.data);
-  }
+    return instance
+      .delete(`follow/${userId}`)
+      .then((response) => response.data);
+  },
 };
