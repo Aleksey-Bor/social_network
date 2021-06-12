@@ -1,4 +1,6 @@
-const SET_USER_DATE = 'SET_USER_DATE';
+import { usersAPI } from "../api/api";
+
+const SET_USER_DATE = "SET_USER_DATE";
 
 let initialState = {
   userId: null,
@@ -13,7 +15,7 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         ...action.data,
-        isAuth: true
+        isAuth: true,
       };
     default:
       return state;
@@ -22,7 +24,18 @@ const authReducer = (state = initialState, action) => {
 
 export const setAuthUserDate = (userId, email, login) => ({
   type: SET_USER_DATE,
-  data: { userId, email, login }
+  data: { userId, email, login },
 });
+
+export const logIn = () => {
+  return (dispatch) => {    
+    usersAPI.logIn().then((response) => {
+      if (response.resultCode === 0) {
+        let { id, email, login } = response.data;
+        dispatch(setAuthUserDate(id, email, login));
+      }
+    });
+  }
+};
 
 export default authReducer;

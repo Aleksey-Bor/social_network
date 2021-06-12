@@ -1,7 +1,5 @@
 import * as axios from "axios";
 
-// const baseUrl = "https://social-network.samuraijs.com/api/1.0/";
-
 const instance = axios.create({
   withCredentials: true,
   baseURL: "https://social-network.samuraijs.com/api/1.0/",
@@ -25,5 +23,13 @@ export const usersAPI = {
     return instance
       .delete(`follow/${userId}`)
       .then((response) => response.data);
+  },
+
+  logIn() {
+    return instance
+    .get(`auth/me`, {
+      withCredentials: true,
+    })
+    .then((response) => response.data);
   },
 };

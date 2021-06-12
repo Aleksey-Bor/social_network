@@ -1,22 +1,11 @@
 import React from "react";
 import Header from "./Header";
-import * as axios from "axios";
 import { connect } from "react-redux";
-import { setAuthUserDate } from "../../Redux/authReducer";
+import { setAuthUserDate, logIn } from "../../Redux/authReducer";
 
 class HeaderContainer extends React.Component {
   componentDidMount() {
-    axios
-      .get(`https://social-network.samuraijs.com/api/1.0//auth/me`, {
-        withCredentials: true,
-      })
-      .then((response) => {
-        console.log(response);
-        if (response.data.resultCode === 0) {
-          let { id, email, login } = response.data.data;
-          this.props.setAuthUserDate(id, email, login);
-        }
-      });
+    this.props.logIn();
   }
 
   render() {
@@ -29,4 +18,4 @@ const mapStateToProps = (state) => ({
   login: state.auth.login,
 });
 
-export default connect(mapStateToProps, { setAuthUserDate })(HeaderContainer);
+export default connect(mapStateToProps, { setAuthUserDate, logIn })(HeaderContainer);
