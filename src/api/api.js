@@ -25,11 +25,14 @@ export const usersAPI = {
       .then((response) => response.data);
   },
 
-  logIn() {
+  getProfile(userId) {
+    return instance.get(`profile/${userId}`);
+  },
+};
+
+export const authAPI = {
+  me() {
     return instance
-    .get(`auth/me`, {
-      withCredentials: true,
-    })
-    .then((response) => response.data);
+      .get(`auth/me`);
   },
 };

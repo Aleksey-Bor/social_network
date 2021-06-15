@@ -1,4 +1,4 @@
-import { usersAPI } from "../api/api";
+import { authAPI } from "../api/api";
 
 const SET_USER_DATE = "SET_USER_DATE";
 
@@ -27,15 +27,15 @@ export const setAuthUserDate = (userId, email, login) => ({
   data: { userId, email, login },
 });
 
-export const logIn = () => {
-  return (dispatch) => {    
-    usersAPI.logIn().then((response) => {
-      if (response.resultCode === 0) {
-        let { id, email, login } = response.data;
+export const getAuthUserData = () => {
+  return (dispatch) => {
+    authAPI.me().then((response) => {
+      if (response.data.resultCode === 0) {
+        let { id, email, login } = response.data.data;
         dispatch(setAuthUserDate(id, email, login));
       }
     });
-  }
+  };
 };
 
 export default authReducer;
