@@ -1,6 +1,6 @@
 import React from "react";
 
-class ProfileStatus extends React.Component {
+class ProfileStatus extends React.Component {//This component not use. It stay for example
   state = {
     editMode: false,
     status: this.props.status,
