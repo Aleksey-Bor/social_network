@@ -5,7 +5,8 @@ import Post from "./Post/Post";
 import { /* required,*/ maxLengthCreator, minLengthCreator } from "../../../utils/validators/validators";
 import { Textarea } from "../../common/FormsControls/FormsControls";
 
-const MyPosts = (props) => {
+const MyPosts = React.memo(props => {
+  console.log("RENDER YOU");
   let postsElements = props.postsData.map((el) => (
     <Post message={el.message} likesCount={el.likesCount} id={el.id} />
   ));
@@ -21,7 +22,7 @@ const MyPosts = (props) => {
       <div className={style.posts}>{postsElements}</div>
     </div>
   );
-};
+});
 
 let maxLengthCreator10 = maxLengthCreator(10);
 let minLengthCreator2 = minLengthCreator(2);
