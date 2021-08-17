@@ -2,14 +2,19 @@ import React from "react";
 import { reduxForm, Field } from "redux-form";
 import style from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import { /* required,*/ maxLengthCreator, minLengthCreator } from "../../../utils/validators/validators";
+import {
+  /* required,*/ maxLengthCreator,
+  minLengthCreator,
+} from "../../../utils/validators/validators";
 import { Textarea } from "../../common/FormsControls/FormsControls";
 
-const MyPosts = React.memo(props => {
+const MyPosts = React.memo((props) => {
   console.log("RENDER YOU");
-  let postsElements = props.postsData.map((el) => (
-    <Post message={el.message} likesCount={el.likesCount} id={el.id} />
-  ));
+  let postsElements = [...props.postsData]
+    .reverse()
+    .map((el) => (
+      <Post message={el.message} likesCount={el.likesCount} id={el.id} />
+    ));
 
   let addNewPost = (values) => {
     props.addPost(values.newPostText);
