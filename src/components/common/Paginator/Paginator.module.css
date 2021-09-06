@@ -1,0 +1,14 @@
+.pageButtonsContainer {
+  width: 100%;
+}
+
+.page {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.selectedPage {
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: default;
+}
