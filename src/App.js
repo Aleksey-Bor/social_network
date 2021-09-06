@@ -16,7 +16,6 @@ import { initializeApp } from "./Redux/appReducer";
 import { compose } from "redux";
 import Preloader from "./components/common/preloader/preloader";
 
-
 class App extends Component {
   componentDidMount() {
     this.props.initializeApp();
@@ -24,15 +23,15 @@ class App extends Component {
 
   render() {
     if (!this.props.initialized) {
-      return <Preloader />
+      return <Preloader />;
     }
-    
+
     return (
       <div className="app-wrapper">
         <HeaderContainer />
         <Navbar />
         <div className="app-wrapper-content">
-          <Route  path="/dialogs" render={() => <DialogsContainer />} />
+          <Route path="/dialogs" render={() => <DialogsContainer />} />
           <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
           <Route path="/users" render={() => <UsersContainer />} />
           <Route path="/news" render={() => <News />} />
@@ -46,7 +45,10 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  initialized: state.app.initialized
-})
+  initialized: state.app.initialized,
+});
 
-export default compose(withRouter, connect(mapStateToProps, { initializeApp }))(App);
+export default compose(
+  withRouter,
+  connect(mapStateToProps, { initializeApp })
+)(App);
