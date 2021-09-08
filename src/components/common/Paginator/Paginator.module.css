@@ -12,3 +12,7 @@
   font-weight: bold;
   cursor: default;
 }
+
+.ButtonsPaginator {
+  margin-left: 10px;
+}
