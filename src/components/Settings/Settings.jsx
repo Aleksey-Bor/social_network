@@ -4,7 +4,7 @@ import style from "./Settings.module.css"
 const Settings = (props) => {
     return (
         <div>
-           Settings
+           Settings /  This section is under construction
         </div>
     )
 }

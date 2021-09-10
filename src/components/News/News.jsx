@@ -4,7 +4,7 @@ import style from "./News.module.css"
 const News = (props) => {
     return (
         <div>
-            News
+            News / This section is under construction
         </div>
     )
 }
