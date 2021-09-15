@@ -1,22 +1,28 @@
 .header {
+  display: grid;
   grid-area: h;
-  background-color: aqua;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: #3c26c7;
 }
 
 .header img {
-  width: 30px;
+  margin-left: 5px;
+  width: 50px;
+  border-radius: 30px;
 }
 
 .loginBlock {
-  float: right;
-  margin: 20px;
+  margin-right: 10px;
+  display: grid;
+  justify-items: end;
 }
 
 .loginBlock a {
-  color: darkblue;
+  color: white;
   text-decoration: none;
 }
 
 .loginBlock span {
-  color:darkblue;
+  color:white;
 }
