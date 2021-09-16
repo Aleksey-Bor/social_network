@@ -3,6 +3,7 @@ import style from "./Users.module.css";
 import userPhoto from "../../assets/images/user_unisex.png";
 import { NavLink } from "react-router-dom";
 
+
 let User = ({ user, followingInProgress, unFollowToUser, followToUser }) => {
   return (
     <div>
@@ -19,6 +20,7 @@ let User = ({ user, followingInProgress, unFollowToUser, followToUser }) => {
         <div>
           {user.followed ? (
             <button
+              className={style.button}
               disabled={followingInProgress.some((id) => id === user.id)}
               onClick={() => {
                 unFollowToUser(user.id);
@@ -28,6 +30,7 @@ let User = ({ user, followingInProgress, unFollowToUser, followToUser }) => {
             </button>
           ) : (
             <button
+              className={style.button}
               disabled={followingInProgress.some((id) => id === user.id)}
               onClick={() => {
                 followToUser(user.id);
@@ -40,8 +43,8 @@ let User = ({ user, followingInProgress, unFollowToUser, followToUser }) => {
       </span>
       <span>
         <span>
-          <div>{user.name}</div>
-          <div>{user.status}</div>
+          <div className={style.userName}>{user.name}</div>
+          <div className={style.status}>{user.status}</div>
         </span>
         <span>
           <div>{"user.location.country"}</div>

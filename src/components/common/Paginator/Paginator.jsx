@@ -29,7 +29,7 @@ let Paginator = ({
             setPortionNumber(portionNumber - 1);
           }}
         >
-          PREV
+          &#60;
         </button>
       )}
       {pages
@@ -55,7 +55,7 @@ let Paginator = ({
             setPortionNumber(portionNumber + 1);
           }}
         >
-          NEXT
+          &#62;
         </button>
       )}
     </div>

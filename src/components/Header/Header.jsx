@@ -12,7 +12,7 @@ const Header = (props) => {
         {props.isAuth ? (
           <div>
             <span>
-              {props.login} <button onClick={props.logout}>Logout</button>
+              {props.login} <button className={style.logoutButton} onClick={props.logout}>Logout</button>
             </span>
           </div>
         ) : (

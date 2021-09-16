@@ -4,6 +4,8 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background-color: #3c26c7;
+  position: sticky;
+  top: 0px;
 }
 
 .header img {
@@ -13,7 +15,7 @@
 }
 
 .loginBlock {
-  margin-right: 10px;
+  margin-right: 20px;
   display: grid;
   justify-items: end;
 }
@@ -21,8 +23,48 @@
 .loginBlock a {
   color: white;
   text-decoration: none;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
+    Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
+    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
+    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
+    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
+    sans-serif, arial, Tahoma, verdana;
+  font-weight: 600;
 }
 
 .loginBlock span {
+ 
   color:white;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
+    Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
+    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
+    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
+    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
+    sans-serif, arial, Tahoma, verdana;
+  font-weight: 400;
+}
+
+.logoutButton {
+  margin-left: 10px;
+  border: none;
+  padding: 6px 10px;
+  width: 70px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
+    Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
+    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
+    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
+    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
+    sans-serif, arial, Tahoma, verdana;
+  font-weight: 600;
+  background-color: #6b97ca;
+  color: white;
+}
+
+.logoutButton:hover {
+  background-color: #8bb3e0;
+  cursor: pointer;
 }

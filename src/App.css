@@ -5,6 +5,7 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 1fr 2fr;
   grid-gap: 20px;
+  position: relative;
 }
 
 .app-wrapper-content {

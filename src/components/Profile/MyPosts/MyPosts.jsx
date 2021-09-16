@@ -28,7 +28,7 @@ const MyPosts = React.memo((props) => {
   );
 });
 
-let maxLengthCreator10 = maxLengthCreator(10);
+let maxLengthCreator10 = maxLengthCreator(200);
 let minLengthCreator2 = minLengthCreator(2);
 
 const AddNewPostForm = (props) => {
@@ -36,6 +36,7 @@ const AddNewPostForm = (props) => {
     <form onSubmit={props.handleSubmit}>
       <div>
         <Field
+          className={style.postsTextarea}
           component={Textarea}
           name="newPostText"
           placeholder="Enter your post"
@@ -43,7 +44,7 @@ const AddNewPostForm = (props) => {
         />
       </div>
       <div>
-        <button>Add post</button>
+        <button className={style.postButton}>Add post</button>
       </div>
     </form>
   );

@@ -3,6 +3,8 @@
   grid-area: n;
   align-self: start;
   justify-self: end;
+  position: sticky;
+  top: 80px;
 }
 
 .item a {
