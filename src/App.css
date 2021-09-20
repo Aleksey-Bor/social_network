@@ -3,7 +3,7 @@
   margin: 0 auto;
   grid-template-areas: "h h" "n c";
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(120px, 1fr) 2fr;
   grid-gap: 20px;
   position: relative;
 }

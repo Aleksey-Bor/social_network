@@ -51,6 +51,7 @@
   width: 70px;
   border-radius: 8px;
   font-size: 13px;
+  box-shadow: 5px 5px 4px 5px rgba(0, 0, 0, 0.06);
   font-family: var(--main-font);
   font-weight: 600;
   background-color: #6b97ca;

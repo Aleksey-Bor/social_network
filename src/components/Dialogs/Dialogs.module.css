@@ -1,30 +1,38 @@
+/* :root {
+  --main-font: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
+    "Geneva", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
+    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
+    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
+    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
+    sans-serif, arial, Tahoma, verdana;
+} */
 
 .dialogs {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
 }
 
 .dialogsItems {
-    padding: 10px;
-    color: black;
+  padding: 10px;
 }
 
-.dialogsItems .active {
-    color: red;
+.dialogsItem {
+  padding: 4px;
+  font-family: var(--main-font);
+  font-size: 14px;
+}
+
+.activeLink {
+  color: #6b97ca;
+  font-weight: 600;
 }
 
 .dialogsItems a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
-/* .dialog {
-
-} */
 
 .messages {
-    color: #000000;
-}
-
-.messages .messages {
-    color: blue;
+  color: #000000;
+  font-family: var(--main-font);
+  font-size: 13px;
 }

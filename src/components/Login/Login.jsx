@@ -22,7 +22,7 @@ const LoginForm = ({ handleSubmit, error }) => {
         "rememberMe",
         Input,
         [],
-        "loginCheckBox",
+        "loginCheckBox", //This value is className. It is not used, it is passed to make the code clearer
         { type: "checkbox" },
         "Remember me"
       )}

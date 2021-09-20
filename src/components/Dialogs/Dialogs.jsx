@@ -5,11 +5,10 @@ import Message from "./Message/Message";
 import { reduxForm, Field } from "redux-form";
 import { maxLengthCreator, minLengthCreator } from "../../utils/validators/validators";
 import { Textarea } from "../common/FormsControls/FormsControls";
-// import { Redirect } from "react-router-dom";
 
 const Dialogs = (props) => {
   let dialogsElements = props.dialogsPage.dialogsData.map((el) => (
-    <DialogItem name={el.name} id={el.id} />
+    <DialogItem  name={el.name} id={el.id} />
   ));
   let messagesElement = props.dialogsPage.messagesData.map((el) => (
     <Message message={el.message} id={el.id} />
@@ -30,7 +29,7 @@ const Dialogs = (props) => {
   );
 };
 
-let maxLengthCreator50 = maxLengthCreator(50);
+let maxLengthCreator50 = maxLengthCreator(200);
 let minLengthCreator2 = minLengthCreator(2);
 
 const AddMessageForm = (props) => {
