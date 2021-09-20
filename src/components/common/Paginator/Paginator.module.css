@@ -1,11 +1,5 @@
-.pageButtonsContainer {
-  width: 100%;
-}
-
-.page {
-  margin-left: 10px;
-  cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
+:root {
+  --main-font: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
     "Geneva", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
     "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
     "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
@@ -13,14 +7,19 @@
     sans-serif, arial, Tahoma, verdana;
 }
 
+.pageButtonsContainer {
+  width: 100%;
+}
+
+.page {
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: var(--main-font);
+}
+
 .selectedPage {
   margin-left: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",  
-  "Geneva", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
-  "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
-  "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
-  "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
-  sans-serif, arial, Tahoma, verdana;
+  font-family: var(--main-font);
   font-weight: bold;
   cursor: default;
   color: #2a5885;

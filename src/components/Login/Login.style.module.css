@@ -7,27 +7,35 @@
     sans-serif, arial, Tahoma, verdana;
 }
 
-.formControl.error input,
-.formControl.error textarea {
-  border: rgb(235, 116, 136) solid 2px;
-}
-
-.formControl.error span {
-  color: rgb(235, 116, 136);
-  font: bolder;
-}
-
-.formSummaryError {
-  margin: 10px 0px;
-  width:177px;
-  border: rgb(235, 116, 136) solid 2px;
-  background-color: rgb(235, 116, 136);
-  border-radius: 10px;
-  padding: 5px;
-  font-size: 13px;
+.loginHeader {
   font-family: var(--main-font);
-  text-align: center;
+  color: #3c26c7;
+}
+
+.loginForms {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #3c26c7;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.loginButton {
+  margin-top: 15px;
+  border: none;
+  padding: 6px 10px;
+  width: 70px;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--main-font);
+  background-color: #6b97ca;
   color: white;
 }
 
-
+.loginButton:hover {
+  background-color: #8bb3e0;
+  cursor: pointer;
+}

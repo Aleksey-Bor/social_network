@@ -1,3 +1,12 @@
+:root {
+  --main-font: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
+    "Geneva", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
+    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
+    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
+    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
+    sans-serif, arial, Tahoma, verdana;
+}
+
 .header {
   display: grid;
   grid-area: h;
@@ -24,25 +33,14 @@
   color: white;
   text-decoration: none;
   font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
-    Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
-    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
-    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
-    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
-    sans-serif, arial, Tahoma, verdana;
+  font-family: var(--main-font);
   font-weight: 600;
 }
 
 .loginBlock span {
- 
-  color:white;
+  color: white;
   font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
-    Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
-    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
-    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
-    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
-    sans-serif, arial, Tahoma, verdana;
+  font-family: var(--main-font);
   font-weight: 400;
 }
 
@@ -53,12 +51,7 @@
   width: 70px;
   border-radius: 8px;
   font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
-    Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
-    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
-    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
-    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
-    sans-serif, arial, Tahoma, verdana;
+  font-family: var(--main-font);
   font-weight: 600;
   background-color: #6b97ca;
   color: white;

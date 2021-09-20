@@ -5,13 +5,16 @@ import { createField, Input } from "../common/FormsControls/FormsControls";
 import { connect } from "react-redux";
 import { login } from "./../../Redux/authReducer";
 import { Redirect } from "react-router-dom";
-import style from "../common/FormsControls/FormsControls.module.css";
+import styleFormsControls from "../common/FormsControls/FormsControls.module.css";
+import style from "./Login.style.module.css";
 
 const LoginForm = ({ handleSubmit, error }) => {
+  let className = style.loginForms;
+  
   return (
     <form onSubmit={handleSubmit}>
-      {createField("Email", "email", Input, [required])}
-      {createField("Password", "password", Input, [required], {
+      {createField("Email", "email", Input, [required], className)}
+      {createField("Password", "password", Input, [required], className, {
         type: "password",
       })}
       {createField(
@@ -19,11 +22,14 @@ const LoginForm = ({ handleSubmit, error }) => {
         "rememberMe",
         Input,
         [],
+        "loginCheckBox",
         { type: "checkbox" },
         "Remember me"
       )}
 
-      {error && <div className={style.formSummaryError}>{error}</div>}
+      {error && (
+        <div className={styleFormsControls.formSummaryError}>{error}</div>
+      )}
       <div>
         <button className={style.loginButton}>Login</button>
       </div>
@@ -46,7 +52,7 @@ const Login = (props) => {
 
   return (
     <div>
-      <h1>Login</h1>
+      <h1 className={style.loginHeader}>Login</h1>
       <LoginReduxForm onSubmit={onSubmit} />
     </div>
   );
