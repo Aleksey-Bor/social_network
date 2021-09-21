@@ -14,12 +14,18 @@
 
 .dialogsItems {
   padding: 10px;
+  border-right: solid rgb(236, 236, 236) 1px;
 }
 
 .dialogsItem {
-  padding: 4px;
+  padding: 4px 0px 4px 10px;
   font-family: var(--main-font);
   font-size: 14px;
+  border-radius: 5px;
+}
+
+.dialogsItem:hover {
+  background-color: rgb(231, 228, 228);
 }
 
 .activeLink {
@@ -32,7 +38,43 @@
 }
 
 .messages {
+  border-radius: 0px 5px 5px 0px;
+  padding-left: 20px;
+}
+
+.messageMy {
   color: #000000;
   font-family: var(--main-font);
   font-size: 13px;
+  width: 65%;
+  margin: 5px 10px 20px 0px;
+  border-radius: 30px 30px 30px 0px;
+  padding: 10px 8px 20px 20px;
+  background-color: #e6e3f3;
+}
+
+.messageTextarea {
+  width: 70%;
+  height: 150px;
+  margin: 0px 0px 30px 0px;
+  resize: vertical;
+  padding: 15px;
+  border-radius: 15px;
+  border: solid 1px #ddd9ee;
+  box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.06);
+}
+
+.messageButton {
+  margin: 10px 0px 40px 0px;
+  border: none;
+  padding: 6px 10px;
+  width: 110px;
+  border-radius: 8px;
+  background-color: #5181b8;
+  color: white;
+}
+
+.messageButton:hover {
+  background-color: #6b97ca;
+  cursor: pointer;
 }

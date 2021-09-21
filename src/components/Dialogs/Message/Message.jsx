@@ -1,10 +1,12 @@
-import React from 'react';
-import style from '../Dialogs.module.css';
+import React from "react";
+import style from "../Dialogs.module.css";
 
 const Message = (props) => {
-    return (
-        <div className={style.messages}>{props.message}</div>
-    )
-}
+  return (
+    <div className={style.messages}>
+      <div className={style.messageMy}>{props.message}</div>
+    </div>
+  );
+};
 
 export default Message;
