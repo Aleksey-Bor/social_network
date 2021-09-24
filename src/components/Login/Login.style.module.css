@@ -1,22 +1,13 @@
-:root {
-  --main-font: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
-    "Geneva", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
-    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
-    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
-    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
-    sans-serif, arial, Tahoma, verdana;
-}
-
 .loginHeader {
   font-family: var(--main-font);
-  color: #3c26c7;
+  color: var(--headers-font-color);
 }
 
 .loginForms {
   margin-bottom: 15px;
   padding: 8px;
-  border: 1px solid #3c26c7;
-  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--headers-font-color);
+  box-shadow: var(--loginForm-box-shadow-button);
   border-radius: 10px;
 }
 
@@ -25,17 +16,17 @@
   border: none;
   padding: 6px 10px;
   width: 70px;
-  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--loginForm-box-shadow-button);;
   border-radius: 10px;
   border-radius: 8px;
   font-size: 13px;
   font-weight: 600;
   font-family: var(--main-font);
-  background-color: #6b97ca;
-  color: white;
+  background-color: var(--button-background-color);
+  color: var(--second-fonts-color);
 }
 
 .loginButton:hover {
-  background-color: #8bb3e0;
+  background-color: var(--button-background-hover-color);
   cursor: pointer;
 }

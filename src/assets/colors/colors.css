@@ -1,0 +1,23 @@
+:root {
+    --main-background-color: #edeef0;
+    --main-content-background-color: #ffffff;
+    --header-background-color: #3c26c7;
+    --header-button-background-color: #6b97ca;
+    --header-button-background-hover-color: #8bb3e0;
+    --button-background-color: #5181b8;
+    --button-background-hover-color: #6b97ca;
+    --headers-font-color: #3c26c7;
+    --first-fonts-color: #000000;
+    --second-fonts-color: #ffffff;
+    --first-border-color: rgb(236, 236, 236);
+    --first-elem-hover-background-color: rgb(206, 206, 206);
+    --second-elem-hover-background-color: rgb(231, 228, 228);
+    --first-background-message-color: #e6e3f3;
+    --navbar-link-color: #2a5885;
+    --thirst-activeLink-color: #1877f2;
+    --second-activeLink-color: #6b97ca;
+    --border-textarea-color: #ddd9ee;
+    --box-shadow-button: 5px 5px 4px 5px rgba(0, 0, 0, 0.06);
+    --loginForm-box-shadow-button: 0px 0px 15px 4px rgba(0, 0, 0, 0.06);
+    --error-color: rgb(235, 116, 136);
+}

@@ -1,5 +1,7 @@
 import React, { Suspense } from "react";
 import "./App.css";
+import "./assets/fonts/fonts.css";
+import "./assets/colors/colors.css";
 import { Route, withRouter } from "react-router-dom";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Navbar from "./components/Navbar/Navbar";

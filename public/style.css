@@ -1,8 +1,10 @@
-html, body {
-    margin: 0px;
-    height: 100%;
+html {
+  margin: 0px;
+  height: 100%;
 }
 
 body {
-    background-color: #edeef0;
+  margin: 0px;
+  height: 100%;
+  background-color: var(--main-background-color);
 }

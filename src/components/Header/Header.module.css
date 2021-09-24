@@ -1,20 +1,11 @@
-:root {
-  --main-font: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
-    "Geneva", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
-    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
-    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
-    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
-    sans-serif, arial, Tahoma, verdana;
-}
-
 .header {
   display: grid;
   grid-area: h;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  background-color: #3c26c7;
   position: sticky;
   top: 0px;
+  align-items: center;
+  background-color: var(--header-background-color);
 }
 
 .header img {
@@ -30,35 +21,35 @@
 }
 
 .loginBlock a {
-  color: white;
-  text-decoration: none;
+  color: var(--second-fonts-color);
   font-size: 13px;
-  font-family: var(--main-font);
   font-weight: 600;
+  font-family: var(--main-font);
+  text-decoration: none;
 }
 
 .loginBlock span {
-  color: white;
   font-size: 13px;
-  font-family: var(--main-font);
   font-weight: 400;
+  font-family: var(--main-font);
+  color: var(--second-fonts-color);
 }
 
 .logoutButton {
   margin-left: 10px;
-  border: none;
-  padding: 6px 10px;
+  box-shadow: var(--box-shadow-button);
   width: 70px;
+  border: none;
   border-radius: 8px;
+  padding: 6px 10px;
+  background-color: var( --header-button-background-color);
   font-size: 13px;
-  box-shadow: 5px 5px 4px 5px rgba(0, 0, 0, 0.06);
-  font-family: var(--main-font);
   font-weight: 600;
-  background-color: #6b97ca;
-  color: white;
+  font-family: var(--main-font);
+  color: var(--second-fonts-color);
 }
 
 .logoutButton:hover {
-  background-color: #8bb3e0;
+  background-color: var(--header-button-background-hover-color);
   cursor: pointer;
 }

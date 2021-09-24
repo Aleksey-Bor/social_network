@@ -1,33 +1,24 @@
-:root {
-  --main-font: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
-    "Geneva", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",
-    "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian",
-    "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao",
-    "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
-    sans-serif, arial, Tahoma, verdana;
-}
-
 .formControl.error input,
 .formControl.error textarea {
-  border: rgb(235, 116, 136) solid 2px;
+  border: var(--error-color) solid 2px;
 }
 
 .formControl.error span {
-  color: rgb(235, 116, 136);
+  color: var(--error-color);
   font: bolder;
 }
 
 .formSummaryError {
   margin: 10px 0px;
   width:177px;
-  border: rgb(235, 116, 136) solid 2px;
-  background-color: rgb(235, 116, 136);
+  border: var(--error-color) solid 2px;
+  background-color: var(--error-color);
   border-radius: 10px;
   padding: 5px;
   font-size: 13px;
   font-family: var(--main-font);
   text-align: center;
-  color: white;
+  color: var(--second-fonts-color);
 }
 
 
