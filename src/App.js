@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import "./App.css";
 import "./assets/fonts/fonts.css";
 import "./assets/colors/colors.css";
@@ -22,11 +22,11 @@ const UsersContainer = React.lazy(() =>
   import("./components/Users/UsersContainer")
 );
 
-const News = React.lazy(() => import("./components/News/News"));
+const NewsContainer = React.lazy(() => import("./components/News/News"));
 
-const Music = React.lazy(() => import("./components/Music/Music"));
+const MusicContainer = React.lazy(() => import("./components/Music/Music"));
 
-const Settings = React.lazy(() => import("./components/Settings/Settings"));
+const SettingsContainer = React.lazy(() => import("./components/Settings/Settings"));
 
 class App extends Component {
   componentDidMount() {
@@ -46,9 +46,9 @@ class App extends Component {
           <Route path="/dialogs" render={withSuspense(DialogsContainer)} />
           <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
           <Route path="/users" render={withSuspense(UsersContainer)} />
-          <Route path="/news" render={withSuspense(News)} />
-          <Route path="/music" render={withSuspense(Music)} />
-          <Route path="/settings" render={withSuspense(Settings)} />
+          <Route path="/news" render={withSuspense(NewsContainer)} />
+          <Route path="/music" render={withSuspense(MusicContainer)} />
+          <Route path="/settings" render={withSuspense(SettingsContainer)} />
           <Route path="/login" render={() => <LoginPage />} />
         </div>
       </div> 

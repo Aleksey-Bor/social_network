@@ -1,5 +1,7 @@
 import React from "react";
-import style from "./Settings.module.css"
+// import style from "./Settings.module.css"
+import { withAuthRedirect } from "../../hoc/withAuthRedirect";
+import { compose } from "redux";
 
 const Settings = (props) => {
     return (
@@ -9,4 +11,6 @@ const Settings = (props) => {
     )
 }
 
-export default Settings;
+const SettingsContainer = compose(withAuthRedirect)(Settings);
+
+export default SettingsContainer;

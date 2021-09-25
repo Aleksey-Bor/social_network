@@ -7,7 +7,7 @@ import {
   updateStatus,
 } from "../../Redux/profileReducer";
 import { withRouter } from "react-router";
-// import { withAuthRedirect } from "../../hoc/withAuthRedirect";
+import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
 
 class ProfileContainer extends React.Component {
@@ -44,6 +44,6 @@ let mapStateToProps = (state) => ({
 
 export default compose(
   connect(mapStateToProps, { getUserProfile, getStatus, updateStatus }),
-  withRouter
-  // withAuthRedirect Нам не нужно чтобы Профиль был недоступым для незалогированных пользователей
+  withRouter,
+  withAuthRedirect 
 )(ProfileContainer);
