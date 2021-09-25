@@ -2,6 +2,11 @@
   padding: 10px;
 }
 
+.descriptionBlock img {
+  border-radius: 5px;
+  max-width: 300px;
+}
+
 .descriptionBlock p {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
     "Geneva", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee",

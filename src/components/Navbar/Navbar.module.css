@@ -13,7 +13,7 @@
 }
 
 .item:hover {
-  background-color:var(--first-elem-hover-background-color);
+  background-color: var(--first-elem-hover-background-color);
 }
 
 .item a {
@@ -24,10 +24,13 @@
   color: var(--navbar-link-color);
 }
 
-
 .item a.activeLink {
   color: var(--thirst-activeLink-color);
   cursor: default;
+}
+
+.nav .item:first-child a.activeLink {
+  cursor: pointer;
 }
 
 .NavbarIcon {
