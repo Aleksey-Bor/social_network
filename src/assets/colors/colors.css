@@ -6,10 +6,12 @@
     --header-button-background-hover-color: #8bb3e0;
     --button-background-color: #5181b8;
     --button-background-hover-color: #6b97ca;
-    --headers-font-color: #3c26c7;
+    --first-headers-font-color: #3c26c7;
+    --second-headers-font-color: #2a5885;
     --first-fonts-color: #000000;
     --second-fonts-color: #ffffff;
     --first-border-color: rgb(236, 236, 236);
+    --second-border-color: #ffffff;
     --first-elem-hover-background-color: rgb(206, 206, 206);
     --second-elem-hover-background-color: rgb(231, 228, 228);
     --first-background-message-color: #e6e3f3;

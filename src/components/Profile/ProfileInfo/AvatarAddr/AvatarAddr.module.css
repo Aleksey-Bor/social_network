@@ -1,0 +1,48 @@
+.input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input__file {
+  visibility: hidden;
+  position: absolute;
+}
+
+.input__fileButton {
+  display: flex;
+  margin: 10px 0px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--button-background-color);
+  cursor: pointer;
+}
+
+.input__fileButton:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.input__iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-right: solid var(--second-border-color) 1px;
+}
+
+.input__fileIcon {
+  height: 18px;
+  width: 18px;
+}
+
+.input__fileButtonText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 400px;
+  font-family: var(--main-font);
+  color: var(--second-fonts-color);
+}
