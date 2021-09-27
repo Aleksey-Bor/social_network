@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className={style.item}>
         <NavLink to="/dialogs" activeClassName={style.activeLink}>
           <img className={style.NavbarIcon} src={messageIcon} />
-          Massages
+          Messages
         </NavLink>
       </div>
       <div className={style.item}>
@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className={style.item}>
         <NavLink to="/settings" activeClassName={style.activeLink}>
           <img className={style.NavbarIcon} src={settingsIcon} />
-          Setings
+          Settings
         </NavLink>
       </div>
     </nav>

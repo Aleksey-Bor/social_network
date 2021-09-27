@@ -1,31 +1,35 @@
+.itemUser {
+  margin: 10px 0px 20px 0px;
+}
+
 .userPhoto {
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
 }
 
 .userName {
-    font-size: 13px;
-    font-family: var(--main-font);
-    font-weight: 700;
-    color: #2a5885;
-  }
+  font-size: 13px;
+  font-family: var(--main-font);
+  font-weight: 700;
+  color: #2a5885;
+}
 
+.status {
+  font-style: italic;
+}
 
-  .status {
-    font-style: italic;
-  }
+.button {
+  margin-bottom: 5px;
+  border: none;
+  padding: 6px 10px;
+  width: 70px;
+  border-radius: 8px;
+  background-color: #5181b8;
+  color: white;
+}
 
-  .button {
-      border: none;
-      padding: 6px 10px;
-      width: 70px;
-      border-radius: 8px;
-      background-color: #5181b8;
-      color: white;
-  }
-
-  .button:hover {
-      background-color: #6b97ca;
-      cursor: pointer;
-  }
+.button:hover {
+  background-color: #6b97ca;
+  cursor: pointer;
+}
