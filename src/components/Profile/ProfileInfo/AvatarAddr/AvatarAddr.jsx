@@ -1,5 +1,5 @@
 import React from "react";
-import downloadIcon from "./../../../../assets/icons/download-icon.svg";
+import downloadIcon from "../../../../assets/icons/download-icon.svg";
 import style from "./AvatarAddr.module.css";
 
 const AvatarAddr = ({savePhoto}) => {

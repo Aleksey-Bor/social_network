@@ -61,7 +61,7 @@
   padding: 6px 10px;
   width: 110px;
   border-radius: 8px;
-  background-color: var(--button-background--color);
+  background-color: var(--button-background-color);
   color: var(--second-fonts-color);
 }
 
