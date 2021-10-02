@@ -4,14 +4,19 @@ import style from "./ProfileInfo.module.css";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import userPhoto from "../../../assets/images/user_unisex.png";
 import AvatarAddr from "./AvatarAddr/AvatarAddr";
-import ProfileDataForm from "./ProfileDataForm/ProfileDataForm";
+import ProfileDataFormReduxForm from "./ProfileDataForm/ProfileDataForm";
 
-const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto }) => {
+const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, saveProfile }) => {
   let [editMode, setEditMode] = useState(false);
 
   if (!profile) {
     return <Preloader />;
   }
+
+  const onSubmit = (formData) => {
+    saveProfile(formData);
+    setEditMode(false);
+  };
 
   return (
     <div>
@@ -19,7 +24,7 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto }) => {
         <img src={profile.photos.large || userPhoto} alt="avatar" />
         {isOwner && <AvatarAddr savePhoto={savePhoto} />}
         {editMode ? (
-          <ProfileDataForm profile={profile} />
+          <ProfileDataFormReduxForm initialValues={profile} profile={profile} onSubmit={onSubmit} />
         ) : (
           <ProfileData
             goToEditMode={() => {
@@ -49,14 +54,16 @@ const ProfileData = ({
         <p>{profile.fullName}</p>
       </div>
       <div>
-        <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
+        <p>
+          <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
+        </p>
       </div>
       <div>
         <b>Looking for a job:</b> {profile.lookingForAJob ? "yes" : "no"}
       </div>
       {profile.lookingForAJob && (
         <div>
-          <b>Work description:</b> {profile.lookingForAJobDescription}
+          <b>My professional skills:</b> {profile.lookingForAJobDescription}
         </div>
       )}
       <div>
@@ -83,9 +90,7 @@ const ProfileData = ({
   );
 };
 
-
-
-const Contact = ({ contactTitle, contactValue }) => {
+export const Contact = ({ contactTitle, contactValue }) => {
   return (
     <div className={style.contact}>
       <b>{contactTitle}</b>: {contactValue}
