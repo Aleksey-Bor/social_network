@@ -6,7 +6,14 @@ import userPhoto from "../../../assets/images/user_unisex.png";
 import AvatarAddr from "./AvatarAddr/AvatarAddr";
 import ProfileDataFormReduxForm from "./ProfileDataForm/ProfileDataForm";
 
-const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, saveProfile }) => {
+const ProfileInfo = ({
+  profile,
+  status,
+  updateStatus,
+  isOwner,
+  savePhoto,
+  saveProfile,
+}) => {
   let [editMode, setEditMode] = useState(false);
 
   if (!profile) {
@@ -14,8 +21,9 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, savePr
   }
 
   const onSubmit = (formData) => {
-    saveProfile(formData);
-    setEditMode(false);
+    saveProfile(formData).then(() => {
+      setEditMode(false);
+    });
   };
 
   return (
@@ -24,7 +32,11 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, savePr
         <img src={profile.photos.large || userPhoto} alt="avatar" />
         {isOwner && <AvatarAddr savePhoto={savePhoto} />}
         {editMode ? (
-          <ProfileDataFormReduxForm initialValues={profile} profile={profile} onSubmit={onSubmit} />
+          <ProfileDataFormReduxForm
+            initialValues={profile}
+            profile={profile}
+            onSubmit={onSubmit}
+          />
         ) : (
           <ProfileData
             goToEditMode={() => {

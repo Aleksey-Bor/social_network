@@ -1,16 +1,19 @@
 import React from "react";
 // import ProfileStatusWithHooks from "../ProfileStatusWithHooks";
 import { Contact } from "../ProfileInfo";
+import styleFormsControls from "../../../common/FormsControls/FormsControls.module.css"
 import {
   createField,
   Input,
   Textarea,
 } from "../../../common/FormsControls/FormsControls";
 import { reduxForm } from "redux-form";
+import style from "../ProfileInfo.module.css";
 
 const ProfileDataForm = ({
   profile,
   handleSubmit,
+  error,
   status,
   updateStatus,
   isOwner,
@@ -48,15 +51,16 @@ const ProfileDataForm = ({
         <b>Contacts:</b>{" "}
         {Object.keys(profile.contacts).map((key) => {
           return (
-            <Contact
-              key={key}
-              contactTitle={key}
-              contactValue={profile.contacts[key]}
-            />
+            <div key={key} className={style.contact}>
+              <b>{key}:</b>
+              {createField(key, "contacts." + key, Textarea, [], "")}
+            </div>
           );
         })}
       </div>
-
+      {error && (
+        <div className={styleFormsControls.formSummaryError}>{error}</div>
+      )}
       <div>
         <button>Save</button>
       </div>
