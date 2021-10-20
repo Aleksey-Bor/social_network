@@ -22,4 +22,5 @@
     --box-shadow-button: 5px 5px 4px 5px rgba(0, 0, 0, 0.06);
     --loginForm-box-shadow-button: 0px 0px 15px 4px rgba(0, 0, 0, 0.06);
     --error-color: rgb(235, 116, 136);
+    --error-window-box-shadow: 10px 5px 5px  rgba(0, 0, 0, 0.06);
 }

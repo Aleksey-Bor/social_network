@@ -108,6 +108,8 @@ export const updateStatus = (status) => {
     let response = await profileAPI.updateStatus(status);
     if (response.data.resultCode === 0) {
       dispatch(setStatus(status));
+    } else {
+      return Promise.reject(response.data.messages[0]);
     }
   };
 };
@@ -117,6 +119,8 @@ export const savePhoto = (file) => {
     let response = await profileAPI.savePhoto(file);
     if (response.data.resultCode === 0) {
       dispatch(savePhotoSuccess(response.data.data.photos));
+    } else {
+      return Promise.reject(response.data.messages[0]);
     }
   };
 };

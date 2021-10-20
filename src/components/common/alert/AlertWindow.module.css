@@ -1,0 +1,33 @@
+.alertError {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  width: 350px;
+  height: 200px;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--error-window-box-shadow);
+  border-radius: 10px;
+  background-color: var(--error-color);
+  /* display:table-cell;
+    vertical-align:middle;  */
+  text-align: center;
+  color: var(--second-fonts-color);
+  font-family: var(--main-font);
+}
+
+.buttonWrapper {
+  margin: 0 15px;
+  height: 50%;
+}
+
+.closeButton {
+  margin-top: 22%;
+  float: right;
+  border-radius: 50px;
+  cursor: pointer;
+  background-image: url(../../../assets/icons/close-button.png);
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+}

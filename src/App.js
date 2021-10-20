@@ -9,10 +9,11 @@ import ProfileContainer from "./components/Profile/ProfileContainer";
 import LoginPage from "./components/Login/Login";
 import { Component } from "react";
 import { connect } from "react-redux";
-import { initializeApp } from "./Redux/appReducer";
+import { initializeApp, showModalErrorWindow } from "./Redux/appReducer";
 import { compose } from "redux";
 import Preloader from "./components/common/preloader/preloader";
 import { withSuspense } from "./hoc/withSuspense";
+import AlertWindow from "./components/common/alert/AlertWindow";
 
 const DialogsContainer = React.lazy(() =>
   import("./components/Dialogs/DialogsContainer")
@@ -32,10 +33,10 @@ const SettingsContainer = React.lazy(() =>
 
 class App extends Component {
   catchAllUnhandledErrors = (promiseRejectionEvent) => {
-    alert("Some error occurred");
-    // console.error(promiseRejectionEvent);
+    this.props.showModalErrorWindow(promiseRejectionEvent);
+    console.error("ERORKA: ", promiseRejectionEvent);
   };
-
+  
   componentDidMount() {
     this.props.initializeApp();
     window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
@@ -54,9 +55,10 @@ class App extends Component {
     }
 
     return (
-      <div className="app-wrapper">
+      <div className="app-wrapper" id="appWrapper">
         <HeaderContainer />
         <Navbar />
+        {this.props.errorData && <AlertWindow errorMessage={this.props.errorData.errorData.reason}/>}
         <div className="app-wrapper-content">
           <Switch>
             <Route exact path="/" render={() => <Redirect to={"/profile"} />} />
@@ -80,9 +82,10 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   initialized: state.app.initialized,
+  errorData: state.app.errorData,
 });
 
 export default compose(
   withRouter,
-  connect(mapStateToProps, { initializeApp })
+  connect(mapStateToProps, { initializeApp, showModalErrorWindow })
 )(App);
