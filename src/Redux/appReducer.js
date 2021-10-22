@@ -19,7 +19,7 @@ const appReducer = (state = initialState, action) => {
       };
     }
     case AN_ERROR_HAS_OCCURRED: {
-      return { ...state, errorData: action };
+      return { ...state, errorData: action.errorData };
     }
     default:
       return state;
@@ -44,7 +44,7 @@ export const initializeApp = () => {
   };
 };
 
-export const showModalErrorWindow = (errorData) => {
+export const passErrorData = (errorData) => {
   return (dispatch) => {
     dispatch(anErrorHasOccurred(errorData));
   };

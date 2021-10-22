@@ -1,15 +1,24 @@
 import React from "react";
 import style from "./AlertWindow.module.css";
-import buttonsImg from "../../../assets/icons/close-button.png"
+import buttonsImg from "../../../assets/icons/close-button.png";
 
 const AlertWindow = (props) => {
-  // debugger
+  const closeErrorWindow = () => {
+    const errorData = null;
+    props.passErrorData(errorData);
+  };
+
   return (
     <div className={style.alertError} errorMessage={props.errorMessage}>
-      <h4>Attention an error occurred: </h4> 
+      <h4>Attention an error occurred: </h4>
       <p>{props.errorMessage}</p>
       <div className={style.buttonWrapper}>
-        <button className={style.closeButton}></button>
+        <button
+          className={style.closeButton}
+          onClick={() => {
+            closeErrorWindow();
+          }}
+        ></button>
       </div>
     </div>
   );
