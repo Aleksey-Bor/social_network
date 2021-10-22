@@ -1,12 +1,12 @@
 import { stopSubmit } from "redux-form";
 import { usersAPI, profileAPI } from "../api/api";
 
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
-const SET_USER_PROFILE = "SET_USER_PROFILE";
-const SET_STATUS = "SET_STATUS";
-const DELETE_POST = "DELETE_POST";
-const SAVE_PHOTO_SUCCESS = "SAVE_PHOTO_SUCCESS";
+const ADD_POST = "alex_samurai_network/profile/ADD-POST";
+const UPDATE_NEW_POST_TEXT = "alex_samurai_network/profile/UPDATE-NEW-POST-TEXT";
+const SET_USER_PROFILE = "alex_samurai_network/profile/SET_USER_PROFILE";
+const SET_STATUS = "alex_samurai_network/profile/SET_STATUS";
+const DELETE_POST = "alex_samurai_network/profile/DELETE_POST";
+const SAVE_PHOTO_SUCCESS = "alex_samurai_network/profile/SAVE_PHOTO_SUCCESS";
 
 let initialState = {
   postsData: [

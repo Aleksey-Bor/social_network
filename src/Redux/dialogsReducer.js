@@ -1,4 +1,4 @@
-const SEND_MESSAGE = "SEND-MESSAGE";
+const SEND_MESSAGE = "alex_samurai_network/dialogs/SEND-MESSAGE";
 
 let initialState = {
   messagesData: [

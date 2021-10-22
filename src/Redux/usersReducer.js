@@ -1,13 +1,13 @@
 import { usersAPI } from "../api/api";
 import { updateObjectinFrray } from "../utils/objectHelpers";
 
-const FOLLOW = "FOLLOW";
-const UNFOLLOW = "UNFOLLOW";
-const SET_USERS = "SET-USERS";
-const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
-const SET_TOTAL_USERS_COUNT = "SET_TOTAL_USERS_COUNT";
-const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
-const TOGGLE_IS_FOLLOWING_PROGRESS = "TOGGLE_IS_FOLLOWING_PROGRESS";
+const FOLLOW = "alex_samurai_network/users/FOLLOW";
+const UNFOLLOW = "alex_samurai_network/users/UNFOLLOW";
+const SET_USERS = "alex_samurai_network/users/SET-USERS";
+const SET_CURRENT_PAGE = "alex_samurai_network/users/SET_CURRENT_PAGE";
+const SET_TOTAL_USERS_COUNT = "alex_samurai_network/users/SET_TOTAL_USERS_COUNT";
+const TOGGLE_IS_FETCHING = "alex_samurai_network/users/TOGGLE_IS_FETCHING";
+const TOGGLE_IS_FOLLOWING_PROGRESS = "alex_samurai_network/users/TOGGLE_IS_FOLLOWING_PROGRESS";
 
 let initialState = {
   users: [],

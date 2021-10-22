@@ -1,7 +1,7 @@
 import { getAuthUserData } from "./authReducer";
 
-const INITIALIZED_SUCCESS = "INITIALIZED_SUCCESS";
-const AN_ERROR_HAS_OCCURRED = "AN_ERROR_HAS_OCCURRED";
+const INITIALIZED_SUCCESS = "alex_samurai_network/app/INITIALIZED_SUCCESS";
+const AN_ERROR_HAS_OCCURRED = "alex_samurai_network/app/AN_ERROR_HAS_OCCURRED";
 
 let initialState = {
   initialized: false,
