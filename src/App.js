@@ -34,12 +34,10 @@ const SettingsContainer = React.lazy(() =>
 class App extends Component {
   catchAllUnhandledErrors = (promiseRejectionEvent) => {
     this.props.passErrorData(promiseRejectionEvent);
-    console.log("qq", this.props.errorData);
   };
 
   componentDidMount() {
     this.props.initializeApp();
-    console.log(this.props);
     window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
   }
 

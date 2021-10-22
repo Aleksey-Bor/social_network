@@ -1,7 +1,5 @@
 import React from "react";
-// import ProfileStatusWithHooks from "../ProfileStatusWithHooks";
-import { Contact } from "../ProfileInfo";
-import styleFormsControls from "../../../common/FormsControls/FormsControls.module.css"
+import styleFormsControls from "../../../common/FormsControls/FormsControls.module.css";
 import {
   createField,
   Input,
@@ -10,15 +8,7 @@ import {
 import { reduxForm } from "redux-form";
 import style from "../ProfileInfo.module.css";
 
-const ProfileDataForm = ({
-  profile,
-  handleSubmit,
-  error,
-  status,
-  updateStatus,
-  isOwner,
-  goToEditMode,
-}) => {
+const ProfileDataForm = ({ profile, handleSubmit, error }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>

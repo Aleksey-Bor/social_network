@@ -7,7 +7,7 @@ import socialNetworkLogo from "./../../assets/images/logo.jpg"
 const Header = (props) => {
   return (
     <header className={style.header}>
-      <img src={socialNetworkLogo} />
+      <img src={socialNetworkLogo} alt="logo: Palm" />
       <div className={style.loginBlock}>
         {props.isAuth ? (
           <div>

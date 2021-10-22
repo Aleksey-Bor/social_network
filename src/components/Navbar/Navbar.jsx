@@ -13,37 +13,37 @@ const Navbar = () => {
     <nav className={style.nav}>
       <div className={style.item}>
         <NavLink to="/profile" activeClassName={style.activeLink}>
-          <img className={style.NavbarIcon} src={profileIcon} />
+          <img className={style.NavbarIcon} src={profileIcon} alt="profile"/>
           Profile
         </NavLink>
       </div>
       <div className={style.item}>
         <NavLink to="/dialogs" activeClassName={style.activeLink}>
-          <img className={style.NavbarIcon} src={messageIcon} />
+          <img className={style.NavbarIcon} src={messageIcon} alt="messages" />
           Messages
         </NavLink>
       </div>
       <div className={style.item}>
         <NavLink to="/users" activeClassName={style.activeLink}>
-          <img className={style.NavbarIcon} src={usersIcon} />
+          <img className={style.NavbarIcon} src={usersIcon} alt="users" />
           Users
         </NavLink>
       </div>
       <div className={style.item}>
         <NavLink to="/news" activeClassName={style.activeLink}>
-          <img className={style.NavbarIcon} src={newsIcon} />
+          <img className={style.NavbarIcon} src={newsIcon} alt="news" />
           News
         </NavLink>
       </div>
       <div className={style.item}>
         <NavLink to="/music" activeClassName={style.activeLink}>
-          <img className={style.NavbarIcon} src={musicIcon} />
+          <img className={style.NavbarIcon} src={musicIcon} alt="music" />
           Music
         </NavLink>
       </div>
       <div className={style.item}>
         <NavLink to="/settings" activeClassName={style.activeLink}>
-          <img className={style.NavbarIcon} src={settingsIcon} />
+          <img className={style.NavbarIcon} src={settingsIcon} alt="settings" />
           Settings
         </NavLink>
       </div>

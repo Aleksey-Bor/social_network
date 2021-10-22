@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./AlertWindow.module.css";
-import buttonsImg from "../../../assets/icons/close-button.png";
 
 const AlertWindow = (props) => {
   const closeErrorWindow = () => {
