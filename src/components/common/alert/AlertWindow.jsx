@@ -8,9 +8,9 @@ const AlertWindow = (props) => {
   };
 
   return (
-    <div className={style.alertError} errorMessage={props.errorMessage}>
+    <div className={style.alertError} errormessage={props.errormessage}>
       <h4>Attention an error occurred: </h4>
-      <p>{props.errorMessage}</p>
+      <p>{props.errormessage}</p>
       <div className={style.buttonWrapper}>
         <button
           className={style.closeButton}

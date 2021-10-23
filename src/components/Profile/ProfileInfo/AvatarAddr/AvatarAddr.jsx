@@ -17,7 +17,7 @@ const AvatarAddr = ({savePhoto}) => {
         type={"file"}
         onChange={onMainPhotoSelected}
       />
-      <label for="input_file" className={style.input__fileButton}>
+      <label htmlFor="input_file" className={style.input__fileButton}>
         <span className={style.input__iconWrapper}>
           <img src={downloadIcon} className={style.input__fileIcon} alt="Download avatar" />
         </span>

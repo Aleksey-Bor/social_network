@@ -59,7 +59,7 @@ class App extends Component {
         <Navbar />
         {this.props.errorData ? (
           <AlertWindow
-            errorMessage={this.props.errorData.reason}
+            errormessage={this.props.errorData.reason}
             passErrorData={this.props.passErrorData}
           />
         ) : (

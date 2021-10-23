@@ -43,6 +43,7 @@ let Paginator = ({
               onClick={() => {
                 onPageChanged(p);
               }}
+              key={p}
             >
               {p}
             </span>
