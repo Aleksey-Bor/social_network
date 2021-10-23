@@ -8,10 +8,10 @@ import { Textarea } from "../common/FormsControls/FormsControls";
 
 const Dialogs = (props) => {
   let dialogsElements = props.dialogsPage.dialogsData.map((el) => (
-    <DialogItem  name={el.name} id={el.id} />
+    <DialogItem  name={el.name} id={el.id} key={el.id} />
   ));
   let messagesElement = props.dialogsPage.messagesData.map((el) => (
-    <Message message={el.message} id={el.id} />
+    <Message message={el.message} id={el.id} key={el.id} />
   ));
 
   let addNewMessage = (values) => {

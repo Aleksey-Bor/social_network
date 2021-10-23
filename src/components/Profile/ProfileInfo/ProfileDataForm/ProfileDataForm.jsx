@@ -52,7 +52,7 @@ const ProfileDataForm = ({ profile, handleSubmit, error }) => {
         <div className={styleFormsControls.formSummaryError}>{error}</div>
       )}
       <div>
-        <button>Save</button>
+        <button className={style.saveEditButton}>Save</button>
       </div>
     </form>
   );

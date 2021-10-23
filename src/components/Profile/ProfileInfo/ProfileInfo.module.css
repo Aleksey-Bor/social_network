@@ -7,16 +7,55 @@
   max-width: 300px;
 }
 
-.descriptionBlock p {
+.descriptionBlock div:first-child {
   font-family: var(--main-font);
+  font-size: 18px;
   font-weight: 600;
+  color: var(--first-headers-font-color);
+}
+
+.descriptionBlock div {
+  margin: 5px 0;
+  font-family: var(--main-font);
+  color: var(--first-fonts-color);
+}
+
+.descriptionBlock div b {
+  font-family: var(--main-font);
   color: var(--second-headers-font-color);
+}
+
+.descriptionBlock div.statusContainer {
+  margin-bottom: 20px;
 }
 
 .status {
   font-style: italic;
+  font-family: var(--main-font);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--second-headers-font-color);
+  cursor: pointer;
 }
 
 .contact {
   padding-left: 10px;
+}
+
+.descriptionBlock div.buttonsWrapper {
+  margin-top: 15px;
+}
+
+.saveEditButton {
+  border: none;
+  padding: 6px 8px;
+  width: 90px;
+  border-radius: 8px;
+  background-color: var(--button-background-color);
+  color: var( --second-fonts-color);
+  cursor: pointer;
+}
+
+.saveEditButton:hover {
+  background-color: var(--button-background-hover-color);
 }

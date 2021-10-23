@@ -65,10 +65,8 @@ const ProfileData = ({
       <div>
         <p>{profile.fullName}</p>
       </div>
-      <div>
-        <p>
-          <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
-        </p>
+      <div className={style.statusContainer}>
+        <ProfileStatusWithHooks status={status} updateStatus={updateStatus} isOwner={isOwner} />
       </div>
       <div>
         <b>Looking for a job:</b> {profile.lookingForAJob ? "yes" : "no"}
@@ -94,8 +92,10 @@ const ProfileData = ({
         })}
       </div>
       {isOwner && (
-        <div>
-          <button onClick={goToEditMode}>Edit</button>
+        <div className={style.buttonsWrapper}>
+          <button className={style.saveEditButton} onClick={goToEditMode}>
+            Edit
+          </button>
         </div>
       )}
     </div>
