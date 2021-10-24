@@ -13,7 +13,7 @@ const Profile = (props) => {
         updateStatus={props.updateStatus}
         saveProfile={props.saveProfile}
       />
-      <MyPostsContainer />
+      {props.profile && <MyPostsContainer />}
     </div>
   );
 };

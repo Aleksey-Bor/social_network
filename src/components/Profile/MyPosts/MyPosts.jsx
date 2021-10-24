@@ -12,7 +12,7 @@ const MyPosts = React.memo((props) => {
   let postsElements = [...props.postsData]
     .reverse()
     .map((el) => (
-      <Post message={el.message} likesCount={el.likesCount} id={el.id} key={el.id} />
+      <Post message={el.message} likesCount={el.likesCount} id={el.id} key={el.id} avatar={props.avatar} />
     ));
 
   let addNewPost = (values) => {
@@ -28,7 +28,7 @@ const MyPosts = React.memo((props) => {
   );
 });
 
-let maxLengthCreator10 = maxLengthCreator(200);
+let maxLengthCreator200 = maxLengthCreator(200);
 let minLengthCreator2 = minLengthCreator(2);
 
 const AddNewPostForm = (props) => {
@@ -40,7 +40,7 @@ const AddNewPostForm = (props) => {
           component={Textarea}
           name="newPostText"
           placeholder="Enter your post"
-          validate={[/* required,*/ maxLengthCreator10, minLengthCreator2]}
+          validate={[/* required,*/ maxLengthCreator200, minLengthCreator2]}
         />
       </div>
       <div>

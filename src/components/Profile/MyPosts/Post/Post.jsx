@@ -5,11 +5,11 @@ import likeIcon from "./../../../../assets/icons/like-icon.png";
 const Post = (props) => {
   return (
     <div className={style.item}>
-      <img
-        className={style.avatarImage}
-        src="https://fakeavatarformynetworks.alekseyborkovsk.repl.co/humor_img.jpg"
-        alt="users avatar"
-      />
+    {props.avatar && <img
+      className={style.avatarImage}
+      src={props.avatar}
+      alt="users avatar"
+    />}
       {props.message}
       <div>
         <span>
