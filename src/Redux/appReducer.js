@@ -1,5 +1,5 @@
 import { getAuthUserData } from "./authReducer";
-// reloaded project 
+// Reloaded project from remote repository
 //5.01.2022 will add TypeScript
 
 const INITIALIZED_SUCCESS = "alex_samurai_network/app/INITIALIZED_SUCCESS";
