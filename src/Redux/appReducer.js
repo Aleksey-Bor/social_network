@@ -1,4 +1,6 @@
 import { getAuthUserData } from "./authReducer";
+// reloaded project 
+//5.01.2022 will add TypeScript
 
 const INITIALIZED_SUCCESS = "alex_samurai_network/app/INITIALIZED_SUCCESS";
 const AN_ERROR_HAS_OCCURRED = "alex_samurai_network/app/AN_ERROR_HAS_OCCURRED";
