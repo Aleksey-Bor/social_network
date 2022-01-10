@@ -43,7 +43,9 @@ export type SendMessageActionCreatorType = {
   newMessageBody: string;
 };
 
-export const sendMessageActionCreator = (newMessageBody: string) => ({
+export const sendMessageActionCreator = (
+  newMessageBody: string
+): SendMessageActionCreatorType => ({
   type: SEND_MESSAGE,
   newMessageBody,
 });
