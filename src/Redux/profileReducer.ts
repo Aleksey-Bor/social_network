@@ -10,33 +10,6 @@ const SET_STATUS = "alex_samurai_network/profile/SET_STATUS";
 const DELETE_POST = "alex_samurai_network/profile/DELETE_POST";
 const SAVE_PHOTO_SUCCESS = "alex_samurai_network/profile/SAVE_PHOTO_SUCCESS";
 
-/* type PostsDataType = { id: number; message: string; likesCount: number };
-
-type ContactsType = {
-  github: string;
-  vk: string;
-  facebook: string;
-  instagram: string;
-  twitter: string;
-  website: string;
-  youtube: string;
-  mainLink: string;
-};
-
-type PhotosType = {
-  small: string | null;
-  large: string | null;
-};
-
-type ProfileType = {
-  userId: number;
-  lookingForAJob: boolean;
-  lookingForAJobDescription: string;
-  fullName: string;
-  contacts: ContactsType;
-  photos: PhotosType;
-}; */
-
 let initialState = {
   postsData: [
     { id: 1, message: "Hi, how  are you?", likesCount: 12 },
