@@ -1,5 +1,6 @@
 import { stopSubmit } from "redux-form";
 import { usersAPI, profileAPI } from "../api/api";
+import { PostsDataType, ProfileType, PhotosType } from "../types";
 
 const ADD_POST = "alex_samurai_network/profile/ADD-POST";
 const UPDATE_NEW_POST_TEXT =
@@ -9,7 +10,7 @@ const SET_STATUS = "alex_samurai_network/profile/SET_STATUS";
 const DELETE_POST = "alex_samurai_network/profile/DELETE_POST";
 const SAVE_PHOTO_SUCCESS = "alex_samurai_network/profile/SAVE_PHOTO_SUCCESS";
 
-type PostsDataType = { id: number; message: string; likesCount: number };
+/* type PostsDataType = { id: number; message: string; likesCount: number };
 
 type ContactsType = {
   github: string;
@@ -34,7 +35,7 @@ type ProfileType = {
   fullName: string;
   contacts: ContactsType;
   photos: PhotosType;
-};
+}; */
 
 let initialState = {
   postsData: [
@@ -113,7 +114,10 @@ export const deletePost = (postId: number): DeletePostType => ({
   postId,
 });
 
-type SavePhotoSuccessType = { type: typeof SAVE_PHOTO_SUCCESS; photos: PhotosType };
+type SavePhotoSuccessType = {
+  type: typeof SAVE_PHOTO_SUCCESS;
+  photos: PhotosType;
+};
 
 export const savePhotoSuccess = (photos: PhotosType): SavePhotoSuccessType => ({
   type: SAVE_PHOTO_SUCCESS,
