@@ -8,6 +8,7 @@ let Paginator = ({
   onPageChanged,
   portionSize = 15,
 }) => {
+  // debugger;
   let pagesCount = Math.ceil(totalUsersCount / pageSize);
 
   let pages = [];
@@ -22,6 +23,16 @@ let Paginator = ({
 
   return (
     <div className={style.pageButtonsContainer}>
+      {portionNumber > 2 && (
+        <button
+          className={style.ButtonsPaginator}
+          onClick={() => {
+            setPortionNumber(1);
+          }}
+        >
+          &#60; &#60;
+        </button>
+      )}
       {portionNumber > 1 && (
         <button
           className={style.ButtonsPaginator}
@@ -57,6 +68,16 @@ let Paginator = ({
           }}
         >
           &#62;
+        </button>
+      )}
+      {portionCount > portionNumber && (
+        <button
+          className={style.ButtonsPaginator}
+          onClick={() => {
+            setPortionNumber(portionCount);
+          }}
+        >
+          &#62; &#62;
         </button>
       )}
     </div>
