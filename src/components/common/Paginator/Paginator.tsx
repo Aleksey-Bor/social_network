@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import style from "./Paginator.module.css";
 
+type PropsType = {
+  totalUsersCount: number
+  pageSize: number
+  currentPage: number
+  onPageChanged: (pageNumber: number) => void
+  portionSize: number
+}
+
 let Paginator = ({
   totalUsersCount,
   pageSize,
   currentPage,
   onPageChanged,
   portionSize = 15,
-}) => {
-  // debugger;
+}: PropsType): JSX.Element => {
   let pagesCount = Math.ceil(totalUsersCount / pageSize);
 
-  let pages = [];
+  let pages: Array<number> = [];
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i);
   }
@@ -30,7 +37,7 @@ let Paginator = ({
             setPortionNumber(1);
           }}
         >
-          &#60; &#60;
+          &#60;&#60;
         </button>
       )}
       {portionNumber > 1 && (
@@ -77,7 +84,7 @@ let Paginator = ({
             setPortionNumber(portionCount);
           }}
         >
-          &#62; &#62;
+          &#62;&#62;
         </button>
       )}
     </div>
