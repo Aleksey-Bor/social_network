@@ -2,9 +2,16 @@ import React from "react";
 import style from "./Users.module.css";
 import userPhoto from "../../assets/images/user_unisex.png";
 import { NavLink } from "react-router-dom";
+import { UserType } from "../../types";
 
+type PropsType = {
+  user: UserType
+  followingInProgress: Array<number>
+  unFollowToUser: (userId: number) => void
+  followToUser: (userId: number) => void
+}
 
-let User = ({ user, followingInProgress, unFollowToUser, followToUser }) => {
+let User = ({ user, followingInProgress, unFollowToUser, followToUser }: PropsType): JSX.Element => {
   return (
     <div className={style.itemUser}>
       <span>
