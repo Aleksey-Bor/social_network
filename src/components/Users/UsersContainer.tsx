@@ -19,7 +19,7 @@ import {
   getFollowingInProgress,
 } from "../../Redux/usersSelectors";
 import { UserType } from "../../types";
-import { InitialStateType } from "../../Redux/usersReducer";
+import { AppStateType } from "../../Redux/redux-store";
 
 type PropsType = {
   currentPage: number
@@ -64,7 +64,7 @@ class UsersContainer extends React.Component<PropsType> {
   }
 }
 
-let mapStateToProps = (state: InitialStateType) => {
+let mapStateToProps = (state: AppStateType) => {
   return {
     users: getUsersData(state),
     pageSize: getPageSize(state),
