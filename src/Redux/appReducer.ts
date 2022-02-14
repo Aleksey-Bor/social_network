@@ -60,7 +60,7 @@ export const initializeApp = () => {
 
 export const passErrorData = (errorData: any) => {
   return (dispatch: any) => {
-    dispatch(anErrorHasOccurred(errorData));
+    dispatch(anErrorHasOccurred(errorData)); //Еут если приходит, например, ошибка 403 крашится приложение. Реакт не хочет брать чилдом объект
   };
 };
 
