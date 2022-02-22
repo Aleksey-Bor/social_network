@@ -138,25 +138,25 @@ export const setUserProfile = (profile: ProfileType): SetUserProfileType => ({
 });
 
 type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>;
-type DispatchType = Dispatch<ActionsType>;
-type GetStateType = () => AppStateType;
+// type DispatchType = Dispatch<ActionsType>;
+// type GetStateType = () => AppStateType;
 
 export const getUserProfile = (userId: number): ThunkType => {
-  return async (dispatch/* : DispatchType */) => {
+  return async (dispatch /* : DispatchType */) => {
     let response = await usersAPI.getProfile(userId);
     dispatch(setUserProfile(response.data));
   };
 };
 
 export const getStatus = (userId: number): ThunkType => {
-  return async (dispatch/* : DispatchType */) => {
+  return async (dispatch /* : DispatchType */) => {
     let response = await profileAPI.getStatus(userId);
     dispatch(setStatus(response.data));
   };
 };
 
 export const updateStatus = (status: string): ThunkType => {
-  return async (dispatch/* : DispatchType */) => {
+  return async (dispatch /* : DispatchType */) => {
     let response = await profileAPI.updateStatus(status);
     if (response.data.resultCode === 0) {
       dispatch(setStatus(status));
@@ -166,8 +166,9 @@ export const updateStatus = (status: string): ThunkType => {
   };
 };
 
-export const savePhoto = (file: any): ThunkType => {//??
-  return async (dispatch/* : DispatchType */) => {
+export const savePhoto = (file: any): ThunkType => {
+  //??
+  return async (dispatch /* : DispatchType */) => {
     let response = await profileAPI.savePhoto(file);
     if (response.data.resultCode === 0) {
       dispatch(savePhotoSuccess(response.data.data.photos));
@@ -178,7 +179,8 @@ export const savePhoto = (file: any): ThunkType => {//??
 };
 
 export const saveProfile = (profile: ProfileType): ThunkType => {
-  return async (dispatch: any, getState: any) => {//!!! ???
+  return async (dispatch: any, getState: any) => {
+    //!!! ???
     let userId = getState().auth.userId;
     let response = await profileAPI.saveProfile(profile);
     if (response.data.resultCode === 0) {
